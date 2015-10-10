@@ -40,6 +40,10 @@ class PimpleDumpProvider implements ControllerProviderInterface, ServiceProvider
             if ($name === 'dump.path') {
                 continue;
             }
+            
+            if ($name === 'security') {
+                continue;
+            }
 
             if ($item = $this->parseItem($container, $name)) {
                 $map[] = $item;
